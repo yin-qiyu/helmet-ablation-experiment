@@ -145,3 +145,16 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
+# BiFPN特征融合
+
+>[Cite]Tan, Mingxing, Ruoming Pang, and Quoc V. Le. “Efficientdet: Scalable and efficient object detection.” Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2020.
+>
+>[论文地址](https://arxiv.org/abs/1911.09070)
+>
+>[论文代码](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)
+
+
+
+
+
+# YOLOv5+Ghostconv+BiFPN+CA
