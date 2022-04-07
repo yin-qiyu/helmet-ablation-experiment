@@ -12,11 +12,18 @@ batch-size: 32
 
 Image-size: 640
 
+```python
+# Parameters
+nc: 2  # number of classes
+depth_multiple: 0.33  # model depth multiple
+width_multiple: 0.25  # layer channel multiple
+```
+
 # 预训练测试
 
 - exp11
 
-  models:yolov5n.yaml
+  cfg:yolov5n.yaml
 
   Model size:3.9M
 
@@ -28,7 +35,7 @@ Image-size: 640
 
 - exp15
 
-  models：yolov5n.yaml
+  cfg：yolov5n.yaml
 
   Model size:3.9M
 
@@ -49,7 +56,7 @@ Image-size: 640
 
 - exp17
 
-  models: yolov5-shufflenetv2.yaml
+  cfg: yolov5-shufflenetv2.yaml
 
   Model size: 805kB
 
@@ -66,7 +73,7 @@ Image-size: 640
 > [论文代码](https://github.com/xiaolai-sqlai/mobilenetv3)
 
 - exp18
-- models: yolov5-mobilenetv3-small.yaml
+- cfg: yolov5-mobilenetv3-small.yaml
 - Model size: 2.0M
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407124323895.png" alt="image-20220407124323895"  width="800" />
@@ -81,13 +88,29 @@ Image-size: 640
 >
 > [论文代码](https://github.com/huawei-noah/CV-Backbones/tree/master/ghostnet_pytorch)
 
+## test1: v6.0
+
+- cfg: yolov5n-ghost.yaml
+
 - exp19
 
 
 
+# test2: v6.1
+
+- cfg: yolov5n-ghost-sppf.yaml
 
 
-# action激活函数
+
+# ACON激活函数
 
 > Ma, Ningning, et al. “Activate or not: Learning customized activation.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
-> 
+>
+> [论文地址](https://arxiv.org/abs/2009.04759)
+>
+> [论文代码](https://github.com/nmaac/acon/blob/main/acon.py)
+
+
+
+
+
