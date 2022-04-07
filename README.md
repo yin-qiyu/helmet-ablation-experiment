@@ -6,7 +6,7 @@ train：4500
 
 val：500
 
-# 基础参数设置
+## 基础参数设置
 
 batch-size: 32
 
@@ -19,7 +19,7 @@ depth_multiple: 0.33  # model depth multiple
 width_multiple: 0.25  # layer channel multiple
 ```
 
-# 预训练测试
+## 预训练测试
 
 - exp11
 
@@ -46,7 +46,7 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-# Shufflenetv2
+## Shufflenetv2
 
 > [Cite]Ma, Ningning, et al. “Shufflenet v2: Practical guidelines for efficient cnn architecture design.” Proceedings of the European conference on computer vision (ECCV). 2018.
 >
@@ -64,7 +64,7 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-# Mobilenetv3
+## Mobilenetv3
 
 > [Cite]Howard, Andrew, et al. “Searching for mobilenetv3.” Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019.
 >
@@ -80,7 +80,7 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-# Ghostnet
+## Ghostnet
 
 > Han, Kai, et al. “Ghostnet: More features from cheap operations.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.
 >
@@ -88,7 +88,7 @@ width_multiple: 0.25  # layer channel multiple
 >
 > [论文代码](https://github.com/huawei-noah/CV-Backbones/tree/master/ghostnet_pytorch)
 
-## test1: v6.0
+### test1: v6.0
 
 - cfg: yolov5n-ghost.yaml
 
@@ -97,21 +97,21 @@ width_multiple: 0.25  # layer channel multiple
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407161248022.png" alt="image-20220407161248022" width="800" />
 
-## test2: v6.1
+### test2: v6.1
 
 - cfg: yolov5n-ghost-v61.yaml
 
 - exp20
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407195212431.png" alt="image-20220407195212431" width="800" />
 
-
-## 网络对比
+### 网络对比
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407144724940.png" alt="image-20220407144724940" width="1000" />
 
 
 
-# ACON激活函数
+## ACON激活函数
 
 > Ma, Ningning, et al. “Activate or not: Learning customized activation.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
 >
@@ -123,17 +123,22 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-# 注意力机制
+## 注意力机制
 
-## CBAM
+### CBAM
 
 > Woo, Sanghyun, et al. “Cbam: Convolutional block attention module.” *Proceedings of the European conference on computer vision (ECCV)*. 2018.
 >
 > [论文地址](https://arxiv.org/abs/1807.06521)
 
+- exp21
+- cfg: yolov5-cbam.yaml
 
 
-## CA
+
+
+
+### CA
 
 > Hou, Qibin, Daquan Zhou, and Jiashi Feng. “Coordinate attention for efficient mobile network design.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
 >
@@ -145,7 +150,7 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-# BiFPN特征融合
+## BiFPN特征融合
 
 >[Cite]Tan, Mingxing, Ruoming Pang, and Quoc V. Le. “Efficientdet: Scalable and efficient object detection.” Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2020.
 >
@@ -157,4 +162,35 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-# YOLOv5+Ghostconv+BiFPN+CA
+## SwinTrans
+
+
+
+
+
+## YOLOv5+Ghostconv+BiFPN+CA
+
+
+
+
+
+
+
+
+
+## Results
+
+| Models | mAP@.5 | mAP@.5:.95 | GFLOPS | params(M) | FLOPs | speed |
+| ------ | ------ | ---------- | ------ | --------- | ----- | ----- |
+|        |        |            |        |           |       |       |
+
+## TO DO
+
++ [x] backbone: ShuffleNetV2
++ [x] backbone: Mobilenetv3
++ [x] backbone: Ghostnet
++ [ ] head:BiFPN
++ [ ] YOLOv5+Ghostconv+BiFPN+CA
++ [ ] backbone: SwinTrans
++ [ ] Prune: FSP
+
