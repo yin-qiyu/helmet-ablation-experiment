@@ -1,4 +1,4 @@
-# 消融实验
+# 轻量化网络-消融实验
 
 数据集：[Safety Helmet Detection](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection)
 train：4500
@@ -39,11 +39,11 @@ Image-size: 640
 
 # Shufflenetv2
 
-[Cite]Ma, Ningning, et al. “Shufflenet v2: Practical guidelines for efficient cnn architecture design.” Proceedings of the European conference on computer vision (ECCV). 2018.
-
-[论文地址](https://arxiv.org/abs/1807.11164)
-
-[论文代码](https://github.com/megvii-model/ShuffleNet-Series)
+> [Cite]Ma, Ningning, et al. “Shufflenet v2: Practical guidelines for efficient cnn architecture design.” Proceedings of the European conference on computer vision (ECCV). 2018.
+>
+> [论文地址](https://arxiv.org/abs/1807.11164)
+>
+> [论文代码](https://github.com/megvii-model/ShuffleNet-Series)
 
 - exp17
 
@@ -57,26 +57,35 @@ Image-size: 640
 
 # Mobilenetv3
 
-[Cite]Howard, Andrew, et al. “Searching for mobilenetv3.” Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019.
-
-[论文地址](https://arxiv.org/abs/1905.02244)
-
-[论文代码](https://github.com/xiaolai-sqlai/mobilenetv3)
+> [Cite]Howard, Andrew, et al. “Searching for mobilenetv3.” Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019.
+>
+> [论文地址](https://arxiv.org/abs/1905.02244)
+>
+> [论文代码](https://github.com/xiaolai-sqlai/mobilenetv3)
 
 - exp18
 - models: yolov5-mobilenetv3-small.yaml
+- Model size: 2.0M
 
-
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407124323895.png" alt="image-20220407124323895"  width="800" />
 
 
 
 # Ghostnet
 
-Han, Kai, et al. “Ghostnet: More features from cheap operations.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.
+> Han, Kai, et al. “Ghostnet: More features from cheap operations.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.
+>
+> [论文地址](https://arxiv.org/abs/1911.11907)
+>
+> [论文代码](https://github.com/huawei-noah/CV-Backbones/tree/master/ghostnet_pytorch)
 
-[论文地址](https://arxiv.org/abs/1911.11907)
-
-[论文代码](https://github.com/huawei-noah/CV-Backbones/tree/master/ghostnet_pytorch)
+- exp19
 
 
 
+
+
+# action激活函数
+
+> Ma, Ningning, et al. “Activate or not: Learning customized activation.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
+> 
