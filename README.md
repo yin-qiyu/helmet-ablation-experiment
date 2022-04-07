@@ -1,7 +1,9 @@
 # 轻量化网络-消融实验
 
 数据集：[Safety Helmet Detection](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection)
+
 train：4500
+
 val：500
 
 # 基础参数设置
