@@ -93,12 +93,21 @@ width_multiple: 0.25  # layer channel multiple
 - cfg: yolov5n-ghost.yaml
 
 - exp19
+- Model size: 2.4M
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407161248022.png" alt="image-20220407161248022" width="800" />
+
+## test2: v6.1
+
+- cfg: yolov5n-ghost-v61.yaml
+
+- exp20
 
 
 
-# test2: v6.1
+## 网络对比
 
-- cfg: yolov5n-ghost-sppf.yaml
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407144724940.png" alt="image-20220407144724940" width="1000" />
 
 
 
@@ -109,6 +118,28 @@ width_multiple: 0.25  # layer channel multiple
 > [论文地址](https://arxiv.org/abs/2009.04759)
 >
 > [论文代码](https://github.com/nmaac/acon/blob/main/acon.py)
+
+
+
+
+
+# 注意力机制
+
+## CBAM
+
+> Woo, Sanghyun, et al. “Cbam: Convolutional block attention module.” *Proceedings of the European conference on computer vision (ECCV)*. 2018.
+>
+> [论文地址](https://arxiv.org/abs/1807.06521)
+
+
+
+## CA
+
+> Hou, Qibin, Daquan Zhou, and Jiashi Feng. “Coordinate attention for efficient mobile network design.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
+>
+> [论文地址](https://arxiv.org/abs/2103.02907)
+>
+> [论文代码](https://github.com/Andrew-Qibin/CoordAttention)
 
 
 
