@@ -262,6 +262,34 @@ v1主要用的分组卷积
 
 
 
+# 对比：
+
+yolov5n误判：
+
+005308、005316、005322、005354、005395
+
+特殊情况无法判断：005381(蹲下只有头盔)
+
+小目标漏检：005351、005384
+
+
+
+|      | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3.jpg" alt="005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3" style="zoom:50%;" /> | <img src="/Users/yinqiyu/PycharmProjects/Helmet-test/yolov5-6.0/runs/detect/exp9/005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3.jpg" alt="005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3" style="zoom:50%;" /> |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+|      | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9.jpg" alt="005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9" style="zoom:50%;" /> |                                                              |
+|      | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2.jpg" alt="005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2" style="zoom:50%;" /> |                                                              |
+|      | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c.jpg" alt="005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c" style="zoom:50%;" /> |                                                              |
+|      | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3.jpg" alt="005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3" style="zoom:50%;" /> |                                                              |
+|      |                                                              |                                                              |
+
+
+
+
+
+
+
+
+
 ## TO DO
 
 + [x] backbone: ShuffleNetV2
@@ -270,7 +298,8 @@ v1主要用的分组卷积
 + [x] backbone：CBAN
 + [x] backbone：CA
 + [x] head:BiFPN
-+ [ ] YOLOv5+Ghostconv+BiFPN+CA
++ [x] YOLOv5+Ghostconv+BiFPN+CA⭐️
 + [ ] backbone: SwinTrans
 + [ ] Prune: FSP
++ [ ] contrast🚀
 
