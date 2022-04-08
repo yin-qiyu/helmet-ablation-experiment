@@ -8,6 +8,13 @@ val：500
 
 ## 基础参数设置
 
+```
+default=8	   1 epochs completed in 0.017 hours.
+default=32	 1 epochs completed in 0.013 hours.
+default=64   1 epochs completed in 0.012 hours.
+default=128  1 epochs completed in 0.014 hours.
+```
+
 batch-size: 32
 
 Image-size: 640
@@ -18,6 +25,14 @@ nc: 2  # number of classes
 depth_multiple: 0.33  # model depth multiple
 width_multiple: 0.25  # layer channel multiple
 ```
+
+
+
+## baseline
+
+
+
+
 
 ## 预训练测试
 
@@ -54,6 +69,12 @@ width_multiple: 0.25  # layer channel multiple
 >
 > [论文代码](https://github.com/megvii-model/ShuffleNet-Series)
 
+v1主要用的分组卷积
+
+
+
+### 实验结果
+
 - exp17
 
   cfg: yolov5-shufflenetv2.yaml
@@ -72,6 +93,12 @@ width_multiple: 0.25  # layer channel multiple
 >
 > [论文代码](https://github.com/xiaolai-sqlai/mobilenetv3)
 
+深度可分离卷积(depth-wise convolution)
+
+
+
+### 实验结果
+
 - exp18
 - cfg: yolov5-mobilenetv3-small.yaml
 - Model size: 2.0M
@@ -88,7 +115,13 @@ width_multiple: 0.25  # layer channel multiple
 >
 > [论文代码](https://github.com/huawei-noah/CV-Backbones/tree/master/ghostnet_pytorch)
 
-### test1: v6.0
+
+
+
+
+### 实验结果
+
+#### test1: v6.0
 
 - cfg: yolov5n-ghost.yaml
 
@@ -97,7 +130,7 @@ width_multiple: 0.25  # layer channel multiple
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407161248022.png" alt="image-20220407161248022" width="800" />
 
-### test2: v6.1
+#### test2: v6.1
 
 - cfg: yolov5n-ghost-v61.yaml
 
@@ -105,7 +138,7 @@ width_multiple: 0.25  # layer channel multiple
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407195212431.png" alt="image-20220407195212431" width="800" />
 
-### 网络对比
+#### 网络对比
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407144724940.png" alt="image-20220407144724940" width="1000" />
 
@@ -131,10 +164,14 @@ width_multiple: 0.25  # layer channel multiple
 >
 > [论文地址](https://arxiv.org/abs/1807.06521)
 
+
+
+#### 实验结果
+
 - exp21
 - cfg: yolov5-cbam.yaml
 
-
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407232545101.png" alt="image-20220407232545101" width="800" />
 
 
 
@@ -146,7 +183,12 @@ width_multiple: 0.25  # layer channel multiple
 >
 > [论文代码](https://github.com/Andrew-Qibin/CoordAttention)
 
+#### 实验结果
 
+- exp22
+- yolov5-ca.yaml
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408115306886.png" alt="image-20220408115306886" width="800" />
 
 
 
@@ -162,9 +204,22 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-## SwinTrans
+### 实验结果
+
+- exp23
+- cfg: yolov5-bifpn.yaml
+
+![image-20220408151444731](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408151444731.png)
 
 
+
+
+
+## Transfomer
+
+> [论文地址]()
+>
+> [论文代码]()
 
 
 
@@ -172,7 +227,10 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
+### 实验结果
 
+- exp24
+- cfg: yolov5-Ghostconv-BiFPN-CA
 
 
 
@@ -189,7 +247,9 @@ width_multiple: 0.25  # layer channel multiple
 + [x] backbone: ShuffleNetV2
 + [x] backbone: Mobilenetv3
 + [x] backbone: Ghostnet
-+ [ ] head:BiFPN
++ [x] backbone：CBAN
++ [x] backbone：CA
++ [x] head:BiFPN
 + [ ] YOLOv5+Ghostconv+BiFPN+CA
 + [ ] backbone: SwinTrans
 + [ ] Prune: FSP
