@@ -1,6 +1,11 @@
 # 轻量化网络-消融实验
 
-数据集：[Safety Helmet Detection](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection)
+数据集：
+
+1. [Safety Helmet Detection(kaggle.com)](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection)
+2. [Hard Hat Workers Dataset (roboflow.com)](https://public.roboflow.com/object-detection/hard-hat-workers)
+
+
 
 train：4500
 
@@ -9,7 +14,7 @@ val：500
 ## 基础参数设置
 
 ```
-default=8	   1 epochs completed in 0.017 hours.
+default=8		 1 epochs completed in 0.017 hours.
 default=32	 1 epochs completed in 0.013 hours.
 default=64   1 epochs completed in 0.012 hours.
 default=128  1 epochs completed in 0.014 hours.
@@ -30,7 +35,11 @@ width_multiple: 0.25  # layer channel multiple
 
 ## baseline
 
+- exp25
 
+- no-pretrain
+
+  <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408230521207.png" alt="image-20220408230521207" style="zoom:50%;" />
 
 
 
@@ -232,15 +241,26 @@ v1主要用的分组卷积
 - exp24
 - cfg: yolov5-Ghostconv-BiFPN-CA
 
-
+![image-20220408185802294](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408185802294.png)
 
 
 
 ## Results
 
-| Models | mAP@.5 | mAP@.5:.95 | GFLOPS | params(M) | FLOPs | speed |
-| ------ | ------ | ---------- | ------ | --------- | ----- | ----- |
-|        |        |            |        |           |       |       |
+| exp  | Model                      | size     (pixels) | mAPval     0.5:0.95 | mAPval     0.5 | FLOPs | Speed     V100 b32     (ms) | Speed     jetson nano     (ms) | params(M)   | FLOPs     @640 (B) |
+| ---- | -------------------------- | ----------------- | ------------------- | -------------- | ----- | --------------------------- | ------------------------------ | ----------- | ------------------ |
+| 25   | yolov5n                    | 640               | 0.607               | 0.937          | 3.9   |                             |                                | 1.76        | 4.5                |
+| 17   | yolov5n-shufflenetv2       | 640               | 0.513               | 0.865          | 0.5   |                             |                                | 0.22        | 0.5                |
+| 18   | yolov5n-mobilenetv3        | 640               | 0.564               | 0.91           | 1.2   |                             |                                | 0.79        | 1.2                |
+| 19   | yolov5n-ghost              | 640               | 0.599               | 0.934          | 2.3   |                             |                                | 0.94        | 2.3                |
+| 20   | yolov5n-ghost-v61          | 640               | 0.592               | 0.933          | 2.3   |                             |                                | 0.94(0.939) | 2.3                |
+| 21   | yolov5n-cbam               | 640               | 0.61                | 0.939          | 3.8   |                             |                                | 1.69        | 4.1                |
+| 22   | yolov5n-ca                 | 640               | 0.618               | 0.946          |       |                             |                                | 1.77        |                    |
+| 23   | yolov5n-bifpn              | 640               | 0.612               | 0.939          | 4.2   |                             |                                | 1.78        | 4.2                |
+| 24   | yolov5n-Ghostconv-BiFPN-CA | 640               | 0.606               | 0.94           |       |                             |                                | 1.49        |                    |
+|      |                            |                   |                     |                |       |                             |                                |             |                    |
+
+
 
 ## TO DO
 
