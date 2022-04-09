@@ -131,11 +131,14 @@ v1主要用的分组卷积
 
 
 
-- v3相比v2
+#### v3相比v2
 
-#### 更新Block
+- 更新Block
 
 1. 加入SE模块
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100052835.png" alt="SE" style="zoom:50%;" />
+
 2. 更新激活函数
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091556077.png" alt="image-20220409155605016" width="500" />
@@ -193,11 +196,11 @@ v1主要用的分组卷积
 
 link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049016.png" alt="Focus" style="zoom:50%;" />
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049490.png" alt="Conv" style="zoom:50%;" />
 
 # 网络优化
-
-
 
 ## ACON激活函数
 
@@ -242,6 +245,8 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 >
 > [论文代码](https://github.com/Andrew-Qibin/CoordAttention)
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100047262.png" alt="CA" style="zoom:50%;" />
+
 #### 实验结果
 
 - exp22
@@ -279,6 +284,8 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 > [论文地址](https://arxiv.org/abs/2010.11929)
 >
 > [论文代码]()
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049079.png" alt="Transformer" style="zoom:50%;" />
 
 - **exp26**
 - cfg：yolov5n-transformer.yaml
@@ -381,6 +388,8 @@ yolov5n误判：
 而`SPPF`结构是将输入串行通过多个`5x5`大小的`MaxPool`层，这里需要注意的是串行两个`5x5`大小的`MaxPool`层是和一个`9x9`大小的`MaxPool`层计算结果是一样的，串行三个`5x5`大小的`MaxPool`层是和一个`13x13`大小的`MaxPool`层计算结果是一样的。
 
 
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100048248.png" alt="SPP" style="zoom:50%;" />
 
 **SPP vs SPPF**
 
