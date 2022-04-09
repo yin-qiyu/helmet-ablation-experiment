@@ -1,4 +1,4 @@
-# 轻量化网络-消融实验
+# 消融实验
 
 数据集：
 
@@ -43,7 +43,7 @@ width_multiple: 0.25  # layer channel multiple
 
 
 
-## 预训练测试
+# 预训练和batch测试
 
 - exp11
 
@@ -69,6 +69,18 @@ width_multiple: 0.25  # layer channel multiple
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407093558329.png" alt="image-20220407093558329" width="800"/>
 
 
+
+##  batch测试
+
+- exp28
+- yolov5n-Helmet.yaml
+- batch：128
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204092125408.png" alt="image-20220409212506365" style="zoom:50%;" />
+
+
+
+# 轻量化网络
 
 ## Shufflenetv2
 
@@ -102,9 +114,33 @@ v1主要用的分组卷积
 >
 > [论文代码](https://github.com/xiaolai-sqlai/mobilenetv3)
 
+### overview
+
 深度可分离卷积(depth-wise convolution)
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091548744.png" alt="image-20220409154846720" style="zoom:50%;" />
 
+1. 更新Block（bneck）
+
+2. 使用NAS搜索参数
+3. 重新设计耗时层结构
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091549079.png" alt="image-20220409154938056" style="zoom:50%;" />
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091550226.png" alt="image-20220409155041189" style="zoom:50%;" />
+
+
+
+- v3相比v2
+
+#### 更新Block
+
+1. 加入SE模块
+2. 更新激活函数
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091556077.png" alt="image-20220409155605016" style="zoom:50%;" />
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091557420.png" alt="image-20220409155718393" style="zoom:50%;" />
 
 ### 实验结果
 
@@ -153,6 +189,16 @@ v1主要用的分组卷积
 
 
 
+##### focus->conv
+
+link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
+
+
+
+# 网络优化
+
+
+
 ## ACON激活函数
 
 > Ma, Ningning, et al. “Activate or not: Learning customized activation.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
@@ -173,7 +219,11 @@ v1主要用的分组卷积
 >
 > [论文地址](https://arxiv.org/abs/1807.06521)
 
+#### overview
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091659101.png" alt="img" style="zoom:50%;" />
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091700478.png" alt="img" style="zoom:50%;" />
 
 #### 实验结果
 
@@ -218,7 +268,7 @@ v1主要用的分组卷积
 - exp23
 - cfg: yolov5-bifpn.yaml
 
-![image-20220408151444731](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408151444731.png)
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408151444731.png" alt="image-20220408151444731" width="800" />
 
 
 
@@ -226,9 +276,18 @@ v1主要用的分组卷积
 
 ## Transfomer
 
-> [论文地址]()
+> [论文地址](https://arxiv.org/abs/2010.11929)
 >
 > [论文代码]()
+
+- **exp26**
+- cfg：yolov5n-transformer.yaml
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091238744.png" alt="image-20220409123824716" width="800" />
+
+
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091438730.png" alt="image-20220409143834670" width="800" />
 
 
 
@@ -241,28 +300,32 @@ v1主要用的分组卷积
 - exp24
 - cfg: yolov5-Ghostconv-BiFPN-CA
 
-![image-20220408185802294](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408185802294.png)
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408185802294.png" alt="image-20220408185802294" width="800" />
 
 
 
-## Results
-
-| train/exp | Model                      | size     (pixels) | mAPval     0.5:0.95 | mAPval     0.5 | FLOPs | params(M)   | FLOPs     @640 (B) | val/exp | Speed     V100 b32     (ms) | detect-inference-1  (ms) | Speed     jetson nano     (ms) |
-| --------- | -------------------------- | ----------------- | ------------------- | -------------- | ----- | ----------- | ------------------ | ------- | --------------------------- | ------------------------ | ------------------------------ |
-| 25        | yolov5n                    | 640               | 0.607               | 0.937          | 3.9   | 1.76        | 4.5                | 1       | 1.4                         | 9.4                      |                                |
-| 17        | yolov5n-shufflenetv2       | 640               | 0.513               | 0.865          | 0.5   | 0.22        | 0.5                | 2       | 0.5                         | 10.6                     |                                |
-| 18        | yolov5n-mobilenetv3        | 640               | 0.564               | 0.91           | 1.2   | 0.79        | 1.2                | 3       | 1.1                         | 14.5                     |                                |
-| 19        | yolov5n-ghost              | 640               | 0.599               | 0.934          | 2.3   | 0.94        | 2.3                | 4       | 1..0                        | 13.4                     |                                |
-| 20        | yolov5n-ghost-v61          | 640               | 0.592               | 0.933          | 2.3   | 0.94(0.939) | 2.3                | 5       | 1.4                         | 13.9                     |                                |
-| 21        | yolov5n-cbam               | 640               | 0.61                | 0.939          | 3.8   | 1.69        | 4.1                | 6       | 1.9                         | 15.3                     |                                |
-| 22        | yolov5n-ca                 | 640               | 0.618               | 0.946          |       | 1.77        |                    | 7       | 1.6                         | 10.9                     |                                |
-| 23        | yolov5n-bifpn              | 640               | 0.612               | 0.939          | 4.2   | 1.78        | 4.2                | 8       | 1.4                         | 0.9                      |                                |
-| 24        | yolov5n-Ghostconv-BiFPN-CA | 640               | 0.606               | 0.94           |       | 1.49        |                    | 9       | 1.5                         | 10.2                     |                                |
-|           |                            |                   |                     |                |       |             |                    |         |                             |                          |                                |
 
 
 
-# 对比：
+
+# Results
+
+| train/exp | Model                      | size     (pixels) | mAPval     0.5:0.95 | mAPval     0.5 | FLOPs-train | params(M)   | FLOPs     @640 (B) | val/exp | Speed     V100 b32     (ms) | detect-inference-1  (ms) | Speed     jetson nano     (ms) |
+| --------- | -------------------------- | ----------------- | ------------------- | -------------- | ----------- | ----------- | ------------------ | ------- | --------------------------- | ------------------------ | ------------------------------ |
+| 25        | yolov5n                    | 640               | 0.607               | 0.937          | 3.9         | 1.76        | 4.5                | 1       | 1.4                         | 9.4                      |                                |
+| 17        | yolov5n-shufflenetv2       | 640               | 0.513               | 0.865          | 0.5         | 0.22        | 0.5                | 2       | 0.5                         | 10.6                     |                                |
+| 18        | yolov5n-mobilenetv3        | 640               | 0.564               | 0.91           | 1.2         | 0.79        | 1.2                | 3       | 1.1                         | 14.5                     |                                |
+| 19        | yolov5n-ghost              | 640               | 0.599               | 0.934          | 2.3         | 0.94        | 2.3                | 4       | 1..0                        | 13.4                     |                                |
+| 20        | yolov5n-ghost-v61          | 640               | 0.592               | 0.933          | 2.3         | 0.94(0.939) | 2.3                | 5       | 1.4                         | 13.9                     |                                |
+| 21        | yolov5n-cbam               | 640               | 0.61                | 0.939          | 3.8         | 1.69        | 4.1                | 6       | 1.9                         | 15.3                     |                                |
+| 22        | yolov5n-ca                 | 640               | 0.618               | 0.946          |             | 1.77        |                    | 7       | 1.6                         | 10.9                     |                                |
+| 23        | yolov5n-bifpn              | 640               | 0.612               | 0.939          | 4.2         | 1.78        | 4.2                | 8       | 1.4                         | 0.9                      |                                |
+| 24        | yolov5n-Ghostconv-BiFPN-CA | 640               | 0.606               | 0.94           |             | 1.49        |                    | 9       | 1.5                         | 10.2                     |                                |
+|           |                            |                   |                     |                |             |             |                    |         |                             |                          |                                |
+
+
+
+## 对比：
 
 yolov5n误判：
 
@@ -270,7 +333,7 @@ yolov5n误判：
 
 特殊情况无法判断：005381(蹲下只有头盔)
 
-小目标漏检：005351、
+小目标漏检：005351
 
 复杂情况：005384
 
@@ -299,16 +362,51 @@ yolov5n误判：
 
 
 
-## TO DO
+# 其他
+
+## SPP-SPPF
+
+`SPP`:将输入并行通过多个不同大小的`MaxPool`，然后做进一步融合，能在一定程度上解决目标多尺度问题。
+
+而`SPPF`结构是将输入串行通过多个`5x5`大小的`MaxPool`层，这里需要注意的是串行两个`5x5`大小的`MaxPool`层是和一个`9x9`大小的`MaxPool`层计算结果是一样的，串行三个`5x5`大小的`MaxPool`层是和一个`13x13`大小的`MaxPool`层计算结果是一样的。
+
+
+
+**SPP vs SPPF**
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091152646.png" alt="image-20220409115240561" style="zoom:50%;" />
+
+
+
+
+
+## yolov5n6
+
+- **exp27**
+- cfg：yolov5n6
+
+![image-20220409161148223](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091611250.png)
+
+
+
+
+
+## 北航测试
+
+
+
+
+
+# TO DO
 
 + [x] backbone: ShuffleNetV2
 + [x] backbone: Mobilenetv3
-+ [x] backbone: Ghostnet
++ [x] backbone: Ghostnet:star:
 + [x] backbone：CBAN
 + [x] backbone：CA
 + [x] head:BiFPN
 + [x] YOLOv5+Ghostconv+BiFPN+CA⭐️
-+ [ ] backbone: SwinTrans
++ [ ] backbone: c3tr
 + [ ] Prune: FSP
 + [ ] contrast🚀
 
