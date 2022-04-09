@@ -118,16 +118,16 @@ v1主要用的分组卷积
 
 深度可分离卷积(depth-wise convolution)
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091548744.png" alt="image-20220409154846720" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091548744.png" alt="image-20220409154846720" width="500" />
 
 1. 更新Block（bneck）
 
 2. 使用NAS搜索参数
 3. 重新设计耗时层结构
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091549079.png" alt="image-20220409154938056" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091549079.png" alt="image-20220409154938056" width="500" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091550226.png" alt="image-20220409155041189" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091550226.png" alt="image-20220409155041189" width="500" />
 
 
 
@@ -138,9 +138,9 @@ v1主要用的分组卷积
 1. 加入SE模块
 2. 更新激活函数
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091556077.png" alt="image-20220409155605016" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091556077.png" alt="image-20220409155605016" width="500" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091557420.png" alt="image-20220409155718393" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091557420.png" alt="image-20220409155718393" width="500" />
 
 ### 实验结果
 
