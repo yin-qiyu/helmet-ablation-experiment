@@ -291,6 +291,16 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
 
 
+
+
+## swinTransformer
+
+>[论文连接]
+>
+>[代码连接]
+
+
+
 ## YOLOv5+Ghostconv+BiFPN+CA
 
 
@@ -362,7 +372,7 @@ yolov5n误判：
 
 
 
-# 其他
+# 其他测试
 
 ## SPP-SPPF
 
@@ -391,7 +401,62 @@ yolov5n误判：
 
 
 
-## 北航测试
+## tph-yolov5测试
+
+>[论文地址]()
+>
+>[论文代码]()
+
+
+
+
+
+## YOLOX
+
+> [论文地址]([[2107.08430\] YOLOX: Exceeding YOLO Series in 2021 (arxiv.org)](https://arxiv.org/abs/2107.08430))
+>
+> [论文代码]([Megvii-BaseDetection/YOLOX: YOLOX is a high-performance anchor-free YOLO, exceeding yolov3~v5 with MegEngine, ONNX, TensorRT, ncnn, and OpenVINO supported. Documentation: https://yolox.readthedocs.io/ (github.com)](https://github.com/Megvii-BaseDetection/YOLOX))
+
+
+
+
+
+# 调参
+
+## lrf(最终 OneCycleLR 学习率)
+
+[CosineAnnealingLR和OneCycleLR的原理与使用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/350712244)
+
+
+
+### lrf: 0.01
+
+- exp28
+- yolov5n-Helmet.yaml
+- batch：128
+- data/hyps/hyp.scratch-low.yaml
+- lrf: 0.01  # final OneCycleLR learning rate (lr0 * lrf)
+
+**[result](https://wandb.ai/yin-qiyu/helmet/runs/10g70rjo?workspace=user-yin-qiyu)**
+
+
+
+
+
+### lrf: 0.1
+
+- exp29
+
+- yolov5n-Helmet.yaml
+- batch：128
+- data/hyps/hyp.scratch-low.yaml
+- lrf: 0.1  # final OneCycleLR learning rate (lr0 * lrf)
+
+**[result](https://wandb.ai/yin-qiyu/helmet/runs/j01nvbgy?workspace=user-yin-qiyu)**
+
+
+
+
 
 
 
@@ -406,7 +471,17 @@ yolov5n误判：
 + [x] backbone：CA
 + [x] head:BiFPN
 + [x] YOLOv5+Ghostconv+BiFPN+CA⭐️
-+ [ ] backbone: c3tr
++ [x] backbone: c3tr
++ [ ] Backbone:c3str
 + [ ] Prune: FSP
 + [ ] contrast🚀
++ [ ] tph-yolov5
++ [ ] yolox
++ [ ] hyp
+  + [ ] lrf
+
+
+
+
+
 
