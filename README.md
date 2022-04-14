@@ -76,11 +76,13 @@ width_multiple: 0.25  # layer channel multiple
 - yolov5n-Helmet.yaml
 - batch：128
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204092125408.png" alt="image-20220409212506365" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204092125408.png" alt="image-20220409212506365" width="800" />
 
 
 
 # 轻量化网络
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204141946256.png" alt="轻量化神经网络" width="500" />
 
 ## Shufflenetv2
 
@@ -200,6 +202,16 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049490.png" alt="Conv" style="zoom:50%;" />
 
+
+
+## EfficientNetV2
+
+
+
+
+
+
+
 # 网络优化
 
 ## ACON激活函数
@@ -237,7 +249,7 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
 
 
-### CA
+### CA（位置注意力）
 
 > Hou, Qibin, Daquan Zhou, and Jiashi Feng. “Coordinate attention for efficient mobile network design.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
 >
@@ -253,6 +265,16 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 - yolov5-ca.yaml
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408115306886.png" alt="image-20220408115306886" width="800" />
+
+
+
+
+
+## SE（挤压-激励注意力）
+
+
+
+
 
 
 
@@ -286,6 +308,12 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 > [论文代码]()
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049079.png" alt="Transformer" style="zoom:50%;" />
+
+
+
+
+
+
 
 - **exp26**
 - cfg：yolov5n-transformer.yaml
@@ -352,7 +380,7 @@ yolov5n误判：
 
 小目标漏检：005351
 
-复杂情况：005384
+复杂情况（像素过低or情况复杂）：005384
 
 
 
@@ -467,6 +495,28 @@ yolov5n误判：
 
 
 
+# 超参
+
+网络搜索，随机搜索，贝叶斯搜索
+
+ssh -p 17025 root@region-11.autodl.com 
+
+ssh -p 24454 root@region-11.autodl.com 
+
+wandb login --relogin
+
+![image-20220410135410006](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204101354035.png)
+
+
+
+
+
+## 遗传算法
+
+**exp30**
+
+exp31
+
 
 
 
@@ -491,6 +541,17 @@ yolov5n误判：
 
 
 
+# 待解决
+
+## 项目落地
+
+- [ ] 小目标数据集
+
+- [ ] 
 
 
 
+- 简单数据集：
+  - 特征明显
+  - 类别少
+  - 目标大
