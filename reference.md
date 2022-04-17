@@ -18,6 +18,10 @@
 
 # 结果解读
 
+- [x] [COCO - Common Objects in Context (cocodataset.org)](https://cocodataset.org/#detection-eval)
+
+![image-20220416172117300](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204161721331.png)
+
 - [ ] [yolov5 训练结果解析_高祥xiang的博客-CSDN博客_yolov5训练结果](https://blog.csdn.net/qq_27278957/article/details/119968555?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.pc_relevant_antiscanv2&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 
 
@@ -27,6 +31,12 @@
   
 
 - [ ] [PR曲线_qq_39114535的博客-CSDN博客_pr曲线平衡点](https://blog.csdn.net/qq_39114535/article/details/115006696?ops_request_misc=%7B%22request%5Fid%22%3A%22162484280716780269893500%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&request_id=162484280716780269893500&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-9-115006696.pc_search_result_before_js&utm_term=PR曲线&spm=1018.2226.3001.4187)
+
+
+
+- [ ] [目标检测mAP计算以及coco评价标准_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ez4y1X7g2/?spm_id_from=333.788.recommend_more_video.2)
+
+
 
 
 
@@ -46,7 +56,7 @@
 
 
 
-
+- [ ] [PyTorch + Ray Tune 调参_烟雨风渡的博客-CSDN博客_pytorch raytune](https://blog.csdn.net/tszupup/article/details/112059788)
 
 
 
