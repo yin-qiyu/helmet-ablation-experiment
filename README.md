@@ -84,6 +84,10 @@ width_multiple: 0.25  # layer channel multiple
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204141946256.png" alt="轻量化神经网络" width="500" />
 
+
+
+# 轻量化
+
 ## Shufflenetv2
 
 > [Cite]Ma, Ningning, et al. “Shufflenet v2: Practical guidelines for efficient cnn architecture design.” Proceedings of the European conference on computer vision (ECCV). 2018.
@@ -147,6 +151,30 @@ v1主要用的分组卷积
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091557420.png" alt="image-20220409155718393" width="500" />
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170011394.png" alt="image-20220417001114306" style="zoom:50%;" />
+
+1. 减少一个卷积层的卷积核个数（32->16）
+
+2. 精简Last stage
+
+![image-20220417001258583](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170012613.png)
+
+
+
+重新设计激活函数
+
+![image-20220417001420419](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170014451.png)
+
+![image-20220417001554740](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170015780.png)
+
+
+
+
+
+
+
+
+
 ### 实验结果
 
 - exp18
@@ -206,13 +234,19 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
 ## EfficientNetV2
 
-
+>[论文](https://arxiv.org/abs/2104.00298)
 
 
 
 
 
 # 网络优化
+
+## Focus换conv
+
+[Is the Focus layer equivalent to a simple Conv layer? · Issue #4825 · ultralytics/yolov5 (github.com)](https://github.com/ultralytics/yolov5/issues/4825)
+
+
 
 ## ACON激活函数
 
@@ -298,6 +332,10 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408151444731.png" alt="image-20220408151444731" width="800" />
 
 
+
+
+
+## PP-LCNet-1x
 
 
 
@@ -456,7 +494,58 @@ yolov5n误判：
 
 
 
+## 数据增强
 
+
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204171147435.jpg" alt="preview" style="zoom:50%;" />
+
+总共分成上述 4 个步骤，整体流程如下图所示(前两步是马赛克增强，第三步是几何变换增强，第 4 步是 MixUp 增强
+
+\1) 马赛克增强
+
+1. 随机出 4 张图片在待输出图片中交接的中心点坐标
+2. 随机出另外 3 张图片的索引以及读取对应的标注
+3. 对每张图片采用保持宽高比的 resize 操作缩放到指定大小
+4. 按照上下左右规则，计算每张图片在待输出图片中应该放置的位置，因为图片可能出界故还需要计算裁剪坐标
+5. 利用裁剪坐标将缩放后的图片裁剪，然后贴到前面计算出的位置，其余位置全部补 114 像素值
+6. 对每张图片的标注也进行相应处理
+7. 由于拼接了 4 张图，所以输出图片大小会扩大 4 倍
+
+\2) 几何变换增强
+
+random_perspective 包括平移、旋转、缩放、错切等增强，并且会将输入图片还原为 (640, 640)，同时对增强后的标注进行处理，过滤规则是
+
+1. 增强后的 gt bbox 宽高要大于 wh_thr
+2. 增强后的 gt bbox 面积和增强前的 gt bbox 面积要大于 ar_thr，防止增强太严重
+3. 最大宽高比要小于 area_thr，防止宽高比改变太多
+
+\3) MixUp
+
+Mixup 实现方法有多种，常见的做法是：要么 label 直接拼接起来，要么 label 也采用 alpha 混合，作者的做法非常简单，对 label 直接拼接即可，而图片也是采用固定的 0.5:0.5 混合方法。
+
+其处理流程是：
+
+1. 随机出一张图片，必须要保证该图片不是空标注
+2. 对随机出的图片采用保持宽高比的 resize 操作缩放到指定大小
+3. 然后左上 padding 成指定大小，padding 值也是 114
+4. 对 padding 后的图片进行随机抖动增强
+5. 随机采用 flip 增强
+6. 如果处理后的图片比原图大，则还需要进行随机裁剪增强
+7. 对标签进行对应处理，并且采用和马赛克增强一样的过滤规则
+8. 如果过滤后还存在 gt bbox，则采用 0.5:0.5 的比例混合原图和处理后的图片，标签则直接拼接即可
+
+\4) 图片后处理
+
+图片后处理操作也包括众多数据增强操作，如下所示：
+
+1. 随机 ColorJit，包括众多颜色相关增强
+2. 随机翻转增强
+3. 对随机后的图片采用保持宽高比的 resize 操作缩放到指定大小
+4. 对于宽高小于 8 像素的 gt bbox 直接删掉，因为网络输出的最小 stride 是 8
+5. Padding 成正方形图片输出
+
+ 
 
 # 调参
 
