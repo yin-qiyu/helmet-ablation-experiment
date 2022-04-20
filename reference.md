@@ -1,8 +1,34 @@
+# flops
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204202116270.png" alt="image-20220420211622242" style="zoom:50%;" />
+
+
+
+
+
 # 精确率（precision）、召回率（recall）、准确率（accuracy）
 
 - [ ] [博客](https://blog.csdn.net/duan19920101/article/details/121726392)
 
 ![image-20220413160108001](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204131601052.png)
+
+# $A=\frac{TP+TN}{TP+FN+FP+TN}$
+
+
+
+# $P=\frac{TP}{TP+FP}$
+
+
+
+# $R=\frac{TP}{TP+FN}$
+
+
+
+
+
+
+
+$x \div y=z$
 
 
 
