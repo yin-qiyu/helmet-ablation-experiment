@@ -246,7 +246,25 @@ link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
 [Is the Focus layer equivalent to a simple Conv layer? · Issue #4825 · ultralytics/yolov5 (github.com)](https://github.com/ultralytics/yolov5/issues/4825)
 
+```python
+YOLOv5 🚀 2022-3-15 torch 1.11.0+cu102 CUDA:0 (Tesla V100-PCIE-32GB, 32510.5MB)
 
+      Params      GFLOPs  GPU_mem (GB)  forward (ms) backward (ms)                   input                  output
+        7040       23.07         2.259         8.273         19.77       (16, 3, 640, 640)      (16, 64, 320, 320)
+        7040       23.07         1.860         28.66         38.16       (16, 3, 640, 640)      (16, 64, 320, 320)
+        7040       23.07         1.919         8.144         19.86       (16, 3, 640, 640)      (16, 64, 320, 320)
+        7040       23.07         1.860         27.21         39.12       (16, 3, 640, 640)      (16, 64, 320, 320)
+
+Process finished with exit code 0
+```
+
+![image-20220419205619926](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204192056965.png)
+
+
+
+## spp换sppf
+
+![image-20220419205726284](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204192057344.png)
 
 ## ACON激活函数
 
