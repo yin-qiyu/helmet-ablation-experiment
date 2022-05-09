@@ -61,7 +61,7 @@ nohup python train_sparity.py --st --sr 0 --weights yolov5s.pt --data data/helme
 nohup python train_sparity.py --st --sr 0.0002 --weights yolov5s.pt --data data/helmet.yaml --epochs 300 --imgsz 640 --device 1 --name sparse --adam &
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091427649.png" alt="image-20220509142750622" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091427649.png" alt="image-20220509142750622" width="500" />
 
 
 
@@ -72,7 +72,7 @@ nohup python train_sparity.py --st --sr 0.0002 --weights yolov5s.pt --data data/
 nohup python train_sparity.py --st --sr 0.001 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 0 --name sparse-large --adam &
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091428948.png" alt="image-20220509142843915" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091428948.png" alt="image-20220509142843915" width="500" />
 
 
 
@@ -83,7 +83,7 @@ nohup python train_sparity.py --st --sr 0.001 --weights yolov5s.pt --data data/h
 nohup python train_sparity.py --st --sr 0.0001 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 1 --name sparse-smal --adam &
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091426401.png" alt="image-20220509142657352" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091426401.png" alt="image-20220509142657352"  width="500"/>
 
 
 
