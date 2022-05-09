@@ -44,7 +44,7 @@ nohup python train.py --weights yolov5s.pt --data data/helmet.yaml --epochs 300 
 nohup python train_sparity.py --st --sr 0 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 0 --name sparse-baseline --adam &
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091642665.png" alt="image-20220509164212603" width="500" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091646335.png" alt="image-20220509164212603" width="500" />
 
 ## 正常稀疏
 
@@ -53,7 +53,7 @@ nohup python train_sparity.py --st --sr 0 --weights yolov5s.pt --data data/helme
 nohup python train_sparity.py --st --sr 0.0002 --weights yolov5s.pt --data data/helmet.yaml --epochs 300 --imgsz 640 --device 1 --name sparse --adam &
 ```
 
-<img src="/Users/yinqiyu/Library/Mobile%20Documents/com~apple~CloudDocs/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E5%9B%BE%E7%89%87/202205091427649.png" alt="image-20220509142750622" width="500" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091646322.png" alt="image-20220509142750622" width="500" />
 
 
 
@@ -64,7 +64,7 @@ nohup python train_sparity.py --st --sr 0.0002 --weights yolov5s.pt --data data/
 nohup python train_sparity.py --st --sr 0.001 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 0 --name sparse-large --adam &
 ```
 
-<img src="/Users/yinqiyu/Library/Mobile%20Documents/com~apple~CloudDocs/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E5%9B%BE%E7%89%87/202205091428948.png" alt="image-20220509142843915" width="500" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091646425.png" alt="image-20220509142843915" width="500" />
 
 
 
@@ -75,7 +75,7 @@ nohup python train_sparity.py --st --sr 0.001 --weights yolov5s.pt --data data/h
 nohup python train_sparity.py --st --sr 0.0001 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 1 --name sparse-smal --adam &
 ```
 
-<img src="/Users/yinqiyu/Library/Mobile%20Documents/com~apple~CloudDocs/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E5%9B%BE%E7%89%87/202205091426401.png" alt="image-20220509142657352"  width="500"/>
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091646880.png" alt="image-20220509142657352"  width="500"/>
 
 
 
