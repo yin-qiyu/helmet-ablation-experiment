@@ -41,13 +41,55 @@ nohup python train.py --weights yolov5s.pt --data data/helmet.yaml --epochs 300 
 
 
 
-# sparity-0.0002
+# 稀疏化
+
+## 参数为0
 
 ```bash
---st --sr 0.0002 --weights yolov5s.pt --data data/helmet.yaml --epochs 300 --imgsz 640 --device 1 --adam
+# sparity-0
+nohup python train_sparity.py --st --sr 0 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 0 --name sparse-baseline --adam &
 ```
 
 
 
 
+
+## 正常稀疏
+
+```bash
+# sparity-0.0002
+nohup python train_sparity.py --st --sr 0.0002 --weights yolov5s.pt --data data/helmet.yaml --epochs 300 --imgsz 640 --device 1 --name sparse --adam &
+```
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091427649.png" alt="image-20220509142750622" style="zoom: 33%;" />
+
+
+
+## 参数过大
+
+```bash
+# sparity-0.001
+nohup python train_sparity.py --st --sr 0.001 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 0 --name sparse-large --adam &
+```
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091428948.png" alt="image-20220509142843915" style="zoom:33%;" />
+
+
+
+## 参数小
+
+```bash
+# sparity-0.0001
+nohup python train_sparity.py --st --sr 0.0001 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 1 --name sparse-smal --adam &
+```
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205091426401.png" alt="image-20220509142657352" style="zoom: 33%;" />
+
+
+
+## 参数特别小
+
+```bash
+nohup python train_sparity.py --st --sr 0.00005 --weights yolov5s.pt --data data/helmet.yaml --epochs 100 --imgsz 640 --device 1 --name sparse-s --adam &
+```
 
