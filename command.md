@@ -1,5 +1,11 @@
 
 
+```bash
+nvidia-smi
+uname -a
+cat /etc/os-release
+```
+
 
 
 ```

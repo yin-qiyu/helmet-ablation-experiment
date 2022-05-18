@@ -374,7 +374,7 @@ class CBAM(nn.Module):
 
 
 
-## SE（挤压-激励注意力）
+### SE（挤压-激励注意力）
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205031837551.png" alt="image-20220503183736450" style="zoom: 33%;" />
 
