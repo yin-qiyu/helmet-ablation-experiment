@@ -88,7 +88,7 @@ width_multiple: 0.25  # layer channel multiple
 
 # 轻量化
 
-## Shufflenetv2
+##  Shufflenetv2
 
 > [Cite]Ma, Ningning, et al. “Shufflenet v2: Practical guidelines for efficient cnn architecture design.” Proceedings of the European conference on computer vision (ECCV). 2018.
 >

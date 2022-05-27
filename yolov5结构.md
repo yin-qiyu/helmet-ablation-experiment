@@ -100,7 +100,7 @@ class C3(nn.Module):
 
 # yolov5
 
-![img](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091516213.png)
+![img](/Users/yinqiyu/Downloads/202204091516213.png)
 
  
 
