@@ -679,9 +679,7 @@ Mixup 实现方法有多种，常见的做法是：要么 label 直接拼接起�
 
 网络搜索，随机搜索，贝叶斯搜索
 
-ssh -p 17025 root@region-11.autodl.com 
 
-ssh -p 24454 root@region-11.autodl.com 
 
 wandb login --relogin
 
