@@ -36,7 +36,7 @@ class Bottleneck(nn.Module):
         return x + self.cv2(self.cv1(x)) if self.add else self.cv2(self.cv1(x))
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205142248516.png" alt="image-20220514224858483" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205142248516.png" alt="image-20220514224858483" width="400" />
 
 
 
