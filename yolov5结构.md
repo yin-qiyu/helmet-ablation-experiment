@@ -1,16 +1,3 @@
-# 精读顺序
-
-1. 标题+作者
-2. 摘要
-3. 结论
-4. 导言
-5. 相关工作
-6. 模型
-7. 实验
-8. 评论
-
-
-
 # Conv
 
 ```python
@@ -96,29 +83,10 @@ class C3(nn.Module):
         return self.cv3(torch.cat((self.m(self.cv1(x)), self.cv2(x)), 1))
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205142249908.png" alt="image-20220514224908835" style="zoom: 33%;" />
+
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202206101813909.png" alt="image-20220610181310849" width="400" />
 
 # yolov5
 
  
-
-![未命名绘图.drawio](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202206061620499.png)
-
-
-
-
-
-
-
-
-
-
-
-![3691652586642_.pic_hd](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205151151584.jpg)
-
-
-
-
-
-![3211652585350_.pic](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205151152084.jpg)
-
