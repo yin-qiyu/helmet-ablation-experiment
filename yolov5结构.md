@@ -85,7 +85,7 @@ class C3(nn.Module):
 
 
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202206101813909.png" alt="image-20220610181310849" width="400" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202206122248240.png" alt="c3" width="400" />
 
 # yolov5
 
