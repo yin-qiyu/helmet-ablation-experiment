@@ -90,3 +90,11 @@ class C3(nn.Module):
 # yolov5
 
  
+
+
+
+# reference
+
+- https://blog.csdn.net/IEEE_FELLOW/article/details/117236025?spm=1001.2014.3001.5502
+
+- https://blog.csdn.net/IEEE_FELLOW/article/details/117536808
