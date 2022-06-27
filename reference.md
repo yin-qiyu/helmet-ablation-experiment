@@ -1,6 +1,6 @@
 # flops
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204202116270.png" alt="image-20220420211622242" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204202116270.png" alt="image-20220420211622242" style="zoom:50%;" />
 
 
 
@@ -10,7 +10,7 @@
 
 - [ ] [博客](https://blog.csdn.net/duan19920101/article/details/121726392)
 
-![image-20220413160108001](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204131601052.png)
+![image-20220413160108001](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204131601052.png)
 
 # $A=\frac{TP+TN}{TP+FN+FP+TN}$
 
@@ -38,7 +38,7 @@
 
 - [x] [COCO - Common Objects in Context (cocodataset.org)](https://cocodataset.org/#detection-eval)
 
-![image-20220416172117300](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204161721331.png)
+![image-20220416172117300](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204161721331.png)
 
 - [ ] [yolov5 训练结果解析_高祥xiang的博客-CSDN博客_yolov5训练结果](https://blog.csdn.net/qq_27278957/article/details/119968555?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.pc_relevant_antiscanv2&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 

@@ -2,7 +2,7 @@
 
 yolov5s
 
-![image-20220420071342249](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204200713275.png)
+![image-20220420071342249](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204200713275.png)
 
 
 
@@ -14,7 +14,7 @@ yolov5s
 
 > [论文](https://arxiv.org/abs/2007.02491)
 
-![image-20220419162906711](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204191629752.png)
+![image-20220419162906711](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204191629752.png)
 
 
 

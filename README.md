@@ -39,7 +39,7 @@ width_multiple: 0.25  # layer channel multiple
 
 - no-pretrain
 
-  <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408230521207.png" alt="image-20220408230521207" style="zoom:50%;" />
+  <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220408230521207.png" alt="image-20220408230521207" style="zoom:50%;" />
 
 
 
@@ -55,7 +55,7 @@ width_multiple: 0.25  # layer channel multiple
 
   batch-size: 32
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407093516688.png" alt="image-20220407093516688" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407093516688.png" alt="image-20220407093516688" width="800" />
 
 - exp15
 
@@ -66,7 +66,7 @@ width_multiple: 0.25  # layer channel multiple
   Pretrain：none
   batch-size：128
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407093558329.png" alt="image-20220407093558329" width="800"/>
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407093558329.png" alt="image-20220407093558329" width="800"/>
 
 
 
@@ -76,13 +76,13 @@ width_multiple: 0.25  # layer channel multiple
 - yolov5n-Helmet.yaml
 - batch：128
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204092125408.png" alt="image-20220409212506365" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204092125408.png" alt="image-20220409212506365" width="800" />
 
 
 
 # 轻量化网络
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204141946256.png" alt="轻量化神经网络" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204141946256.png" alt="轻量化神经网络" width="500" />
 
 
 
@@ -108,7 +108,7 @@ v1主要用的分组卷积
 
   Model size: 805kB
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407093620656.png" alt="image-20220407093620656" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407093620656.png" alt="image-20220407093620656" width="800" />
 
 
 
@@ -124,16 +124,16 @@ v1主要用的分组卷积
 
 深度可分离卷积(depth-wise convolution)
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091548744.png" alt="image-20220409154846720" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091548744.png" alt="image-20220409154846720" width="500" />
 
 1. 更新Block（bneck）
 
 2. 使用NAS搜索参数
 3. 重新设计耗时层结构
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091549079.png" alt="image-20220409154938056" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091549079.png" alt="image-20220409154938056" width="500" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091550226.png" alt="image-20220409155041189" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091550226.png" alt="image-20220409155041189" width="500" />
 
 
 
@@ -143,29 +143,29 @@ v1主要用的分组卷积
 
 1. 加入SE模块
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100052835.png" alt="SE" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204100052835.png" alt="SE" style="zoom:50%;" />
 
 2. 更新激活函数
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091556077.png" alt="image-20220409155605016" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091556077.png" alt="image-20220409155605016" width="500" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091557420.png" alt="image-20220409155718393" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091557420.png" alt="image-20220409155718393" width="500" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170011394.png" alt="image-20220417001114306" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204170011394.png" alt="image-20220417001114306" style="zoom:50%;" />
 
 1. 减少一个卷积层的卷积核个数（32->16）
 
 2. 精简Last stage
 
-![image-20220417001258583](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170012613.png)
+![image-20220417001258583](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204170012613.png)
 
 
 
 重新设计激活函数
 
-![image-20220417001420419](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170014451.png)
+![image-20220417001420419](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204170014451.png)
 
-![image-20220417001554740](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204170015780.png)
+![image-20220417001554740](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204170015780.png)
 
 
 
@@ -181,7 +181,7 @@ v1主要用的分组卷积
 - cfg: yolov5-mobilenetv3-small.yaml
 - Model size: 2.0M
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407124323895.png" alt="image-20220407124323895"  width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407124323895.png" alt="image-20220407124323895"  width="800" />
 
 
 
@@ -206,7 +206,7 @@ v1主要用的分组卷积
 - exp19
 - Model size: 2.4M
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407161248022.png" alt="image-20220407161248022" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407161248022.png" alt="image-20220407161248022" width="800" />
 
 #### test2: v6.1
 
@@ -214,11 +214,11 @@ v1主要用的分组卷积
 
 - exp20
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407195212431.png" alt="image-20220407195212431" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407195212431.png" alt="image-20220407195212431" width="800" />
 
 #### 网络对比
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407144724940.png" alt="image-20220407144724940" width="1000" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407144724940.png" alt="image-20220407144724940" width="1000" />
 
 
 
@@ -226,9 +226,9 @@ v1主要用的分组卷积
 
 link: https://github.com/ultralytics/yolov5/issues/4825#issue-998038464
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049016.png" alt="Focus" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204100049016.png" alt="Focus" style="zoom:50%;" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049490.png" alt="Conv" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204100049490.png" alt="Conv" style="zoom:50%;" />
 
 
 
@@ -258,13 +258,13 @@ YOLOv5 🚀 2022-3-15 torch 1.11.0+cu102 CUDA:0 (Tesla V100-PCIE-32GB, 32510.5MB
 Process finished with exit code 0
 ```
 
-![image-20220419205619926](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204192056965.png)
+![image-20220419205619926](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204192056965.png)
 
 
 
 ## spp换sppf
 
-![image-20220419205726284](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204192057344.png)
+![image-20220419205726284](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204192057344.png)
 
 ## ACON激活函数
 
@@ -288,9 +288,9 @@ Process finished with exit code 0
 
 #### overview
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091659101.png" alt="img" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091659101.png" alt="img" style="zoom:50%;" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091700478.png" alt="img" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091700478.png" alt="img" style="zoom:50%;" />
 
 
 
@@ -349,7 +349,7 @@ class CBAM(nn.Module):
 - exp21
 - cfg: yolov5-cbam.yaml
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220407232545101.png" alt="image-20220407232545101" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220407232545101.png" alt="image-20220407232545101" width="800" />
 
 
 
@@ -361,14 +361,14 @@ class CBAM(nn.Module):
 >
 > [论文代码](https://github.com/Andrew-Qibin/CoordAttention)
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100047262.png" alt="CA" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204100047262.png" alt="CA" style="zoom:50%;" />
 
 #### 实验结果
 
 - exp22
 - yolov5-ca.yaml
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408115306886.png" alt="image-20220408115306886" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220408115306886.png" alt="image-20220408115306886" width="800" />
 
 
 
@@ -376,7 +376,7 @@ class CBAM(nn.Module):
 
 ### SE（挤压-激励注意力）
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202205031837551.png" alt="image-20220503183736450" style="zoom: 33%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202205031837551.png" alt="image-20220503183736450" style="zoom: 33%;" />
 
 ```python
 class SE(nn.Module):
@@ -420,7 +420,7 @@ class SE(nn.Module):
 - exp23
 - cfg: yolov5-bifpn.yaml
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408151444731.png" alt="image-20220408151444731" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220408151444731.png" alt="image-20220408151444731" width="800" />
 
 
 
@@ -436,7 +436,7 @@ class SE(nn.Module):
 >
 > [论文代码]()
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100049079.png" alt="Transformer" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204100049079.png" alt="Transformer" style="zoom:50%;" />
 
 
 
@@ -447,11 +447,11 @@ class SE(nn.Module):
 - **exp26**
 - cfg：yolov5n-transformer.yaml
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091238744.png" alt="image-20220409123824716" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091238744.png" alt="image-20220409123824716" width="800" />
 
 
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091438730.png" alt="image-20220409143834670" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091438730.png" alt="image-20220409143834670" width="800" />
 
 
 
@@ -474,7 +474,7 @@ class SE(nn.Module):
 - exp24
 - cfg: yolov5-Ghostconv-BiFPN-CA
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220408185802294.png" alt="image-20220408185802294" width="800" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220408185802294.png" alt="image-20220408185802294" width="800" />
 
 
 
@@ -513,23 +513,23 @@ yolov5n误判：
 
 
 
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3.jpg" alt="005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3" style="zoom:50%;" /> | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090131552.jpg" alt="005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3" style="zoom:50%;" /> |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3.jpg" alt="005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3" style="zoom:50%;" /> | <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090131552.jpg" alt="005308_jpg.rf.4403a2f5f05f7715de6bdd234a24f8e3" style="zoom:50%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9.jpg" alt="005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9" style="zoom:50%;" /> | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090143364.jpg" alt="005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9" style="zoom:50%;" /> |
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2.jpg" alt="005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2" style="zoom:50%;" /> | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090132797.jpg" alt="005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2" style="zoom:50%;" /> |
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c.jpg" alt="005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c" style="zoom:50%;" /> | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090133114.jpg" alt="005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c" style="zoom:50%;" /> |
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3.jpg" alt="005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3" style="zoom:50%;" /> | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090136681.jpg" alt="005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3" style="zoom:50%;" /> |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9.jpg" alt="005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9" style="zoom:50%;" /> | <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090143364.jpg" alt="005316_jpg.rf.45c8dd29cadc2f60f46a4ce0a4f9b9b9" style="zoom:50%;" /> |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2.jpg" alt="005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2" style="zoom:50%;" /> | <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090132797.jpg" alt="005322_jpg.rf.38c87c9a9999606bd5936d6ddb6915b2" style="zoom:50%;" /> |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c.jpg" alt="005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c" style="zoom:50%;" /> | <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090133114.jpg" alt="005354_jpg.rf.66ac8412f01e08a6146d5bc63bbb158c" style="zoom:50%;" /> |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3.jpg" alt="005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3" style="zoom:50%;" /> | <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090136681.jpg" alt="005395_jpg.rf.a38830389c0d26e139ba81b2e1a813a3" style="zoom:50%;" /> |
 |                                                              |                                                              |
 
 
 
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090137571.jpg" alt="005381_jpg.rf.be7a0d23f9a13d1e0321014db768002f" style="zoom:50%;" /> | <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090137290.jpg" alt="005381_jpg.rf.be7a0d23f9a13d1e0321014db768002f" style="zoom:50%;" /> |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090137571.jpg" alt="005381_jpg.rf.be7a0d23f9a13d1e0321014db768002f" style="zoom:50%;" /> | <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090137290.jpg" alt="005381_jpg.rf.be7a0d23f9a13d1e0321014db768002f" style="zoom:50%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                                                              |                                                              |
 
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090138086.jpg" alt="005351_jpg.rf.ed2d454b2e059fc13f901bcc62947bfa" style="zoom:50%;" /> | :x:  |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090138086.jpg" alt="005351_jpg.rf.ed2d454b2e059fc13f901bcc62947bfa" style="zoom:50%;" /> | :x:  |
 | :----------------------------------------------------------: | :--: |
-| <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204090139807.jpg" alt="005384_jpg.rf.34ab47f3859c29a33df2780579333dc1" style="zoom:50%;" /> | :x:  |
+| <img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204090139807.jpg" alt="005384_jpg.rf.34ab47f3859c29a33df2780579333dc1" style="zoom:50%;" /> | :x:  |
 |                                                              |      |
 
 
@@ -546,11 +546,11 @@ yolov5n误判：
 
 
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204100048248.png" alt="SPP" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204100048248.png" alt="SPP" style="zoom:50%;" />
 
 **SPP vs SPPF**
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091152646.png" alt="image-20220409115240561" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091152646.png" alt="image-20220409115240561" style="zoom:50%;" />
 
 
 
@@ -561,7 +561,7 @@ yolov5n误判：
 - **exp27**
 - cfg：yolov5n6
 
-![image-20220409161148223](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204091611250.png)
+![image-20220409161148223](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204091611250.png)
 
 
 
@@ -589,7 +589,7 @@ yolov5n误判：
 
 
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204171147435.jpg" alt="preview" style="zoom:50%;" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204171147435.jpg" alt="preview" style="zoom:50%;" />
 
 总共分成上述 4 个步骤，整体流程如下图所示(前两步是马赛克增强，第三步是几何变换增强，第 4 步是 MixUp 增强
 
@@ -683,7 +683,7 @@ Mixup 实现方法有多种，常见的做法是：要么 label 直接拼接起�
 
 wandb login --relogin
 
-![image-20220410135410006](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/202204101354035.png)
+![image-20220410135410006](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/202204101354035.png)
 
 
 
